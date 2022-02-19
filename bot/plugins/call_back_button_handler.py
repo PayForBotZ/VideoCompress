@@ -98,7 +98,7 @@ async def button(bot, update: CallbackQuery):
 
     elif "help" in cb_data:
         await update.message.edit(
-            text=Localisation.HELP_USER,
+            text=Localisation.HELP_MESSAGE,
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
