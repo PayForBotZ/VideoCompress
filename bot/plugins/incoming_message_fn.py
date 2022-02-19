@@ -55,7 +55,7 @@ async def incoming_start_message_f(bot, update):
             if user.status == "kicked":
                await bot.send_message(
                    chat_id=update.chat.id,
-                   text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/UniversalBotsSupport).",
+                   text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/TeleRoid14).",
                    parse_mode="markdown",
                    disable_web_page_preview=True
                )
@@ -77,7 +77,7 @@ async def incoming_start_message_f(bot, update):
         except Exception:
             await bot.send_message(
                 chat_id=update.chat.id,
-                text=f"Add me into your [Updates Channel](https://t.me/{update_channel}), for more help Contact my [Support Group](https://t.me/UniversalBotsSupport).",
+                text=f"Add me into your [Updates Channel](https://t.me/{update_channel}), For help Contact my [Support Group](https://t.me/TeleRoid14).",
                 parse_mode="markdown",
                 disable_web_page_preview=True)
             return
@@ -87,10 +87,15 @@ async def incoming_start_message_f(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Updates Channel', url='https://t.me/UniversalBotsUpdate')
+                    InlineKeyboardButton('Updates Channel', url='https://t.me/TeleRoidGroup')
+                    InlineKeyboardButton('Support Group', url='https://t.me/TeleRoid14')
                 ],
                 [
-                    InlineKeyboardButton('Support Group', url='https://t.me/UniversalBotsSupport')
+                    InlineKeyboardButton('Help', callback_data='help')
+                    InlineKeyboardButton('About', callback_data='about')
+                ],
+                [
+                    InlineKeyboardButton('🔐 Close', callback_data='close')
                 ]
             ]
         ),
@@ -106,7 +111,7 @@ async def incoming_compress_message_f(bot, update):
           if user.status == "kicked":
              await bot.send_message(
                  chat_id=update.chat.id,
-                 text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/UniversalBotsSupport).",
+                 text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/TeleRoid14).",
                  parse_mode="markdown",
                  disable_web_page_preview=True
              )
@@ -128,7 +133,7 @@ async def incoming_compress_message_f(bot, update):
       except Exception:
           await bot.send_message(
               chat_id=update.chat.id,
-              text=f"Add me into your [Updates Channel](https://t.me/{update_channel}), for more help Contact my [Support Group](https://t.me/UniversalBotsSupport).",
+              text=f"Add me into your [Updates Channel](https://t.me/{update_channel}), For help Contact my [Support Group](https://t.me/TeleRoid14).",
               parse_mode="markdown",
               disable_web_page_preview=True
           )
@@ -381,7 +386,7 @@ async def incoming_compress_message_f(bot, update):
       delete_downloads()
       try:
         await sent_message.edit_text(                    
-          text="⚠️ Compression failed ⚠️"               
+          text="⚠️ Compression Failed ⚠️"               
         )
         chat_id = LOG_CHANNEL
         now = datetime.datetime.now()
