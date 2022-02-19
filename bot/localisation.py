@@ -7,7 +7,29 @@ from bot.get_cfg import get_config
 
 class Localisation:
     START_TEXT = "Hello, \n\nI am a Telegram <b>Video Compress Bot</b>. \n\n<b>Please send me any Telegram big file I will compress it as s small video file!</b> \n\nClick /help for more details."
-   
+
+   ABOUT_TEXT = """<b>🤖 My Name: <a href='https://t.me/URLUploaderV3Bot'> @URLUploaderV3Bot </a></b>
+
+<b>👨‍💻 Developer :<a href='https://t.me/PredatorHackerzZ'>@TheTeleRoid</a></b>
+
+<b>📝 Language: 𝐏𝐲𝐭𝐡𝐨𝐧𝟑</b>
+
+<b>📡 Server: <a href='https://www.heroku.com'> Heroku </a></b>
+
+<b>📚 Library: Pyrogram 1.0.7</b>
+
+<b>📖 Source Code:<a href='https://github.com/PredatorHackerzZ/UPLOADER-BOT'> Click Here </a></b>
+
+<b>📢 Bot Support:<a href='https://t.me/TeleRoid14'> @TeleRoid14</a></b>
+
+<b>🔔 Bot Updates: <a href='https://t.me/TeleRoidGroup'> @TeleRoidGroup</a></b>
+
+<b>🌀 Telegram BotList: <a href='https://t.me/TGRobot_List'> @TGRobot_List</a></b>
+
+<b>🚸 Powered By: <a href='https://t.me/MoviesFlixers_DL'> @HindiWebNetwok</a></b>"""
+
+    DONATION_USER = " Nice to Now You!.. Please Donate Some Money As You Wish."
+    
     ABS_TEXT = " Please don't be selfish. 😑"
     
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
