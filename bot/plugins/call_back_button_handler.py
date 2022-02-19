@@ -79,7 +79,7 @@ async def button(bot, update: CallbackQuery):
 				
         elif "about" in cb_data:
         await update.message.edit(
-            text=Translation.ABOUT_TEXT,
+            text=Localisation.ABOUT_TEXT,
             parse_mode="html",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -98,7 +98,7 @@ async def button(bot, update: CallbackQuery):
 
     elif "help" in cb_data:
         await update.message.edit(
-            text=Translation.HELP_USER,
+            text=Localisation.HELP_USER,
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -117,7 +117,7 @@ async def button(bot, update: CallbackQuery):
 
     elif "donate" in cb_data:
         await update.message.edit(
-            text=.DONATION_USER,
+            text=Localisation.DONATION_USER,
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -157,7 +157,7 @@ async def button(bot, update: CallbackQuery):
             )
         )
 
-@Clinton.on_callback_query()
+@Bot.on_callback_query()
 async def button(bot, update):
  
       if  'close'  in update.data:
