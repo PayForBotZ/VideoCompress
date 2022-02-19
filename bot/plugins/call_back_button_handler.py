@@ -77,3 +77,88 @@ async def button(bot, update: CallbackQuery):
             except:
                 pass
 				
+        elif "about" in cb_data:
+        await update.message.edit(
+            text=Translation.ABOUT_TEXT,
+            parse_mode="html",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+					[
+						InlineKeyboardButton("🆘 Help", callback_data="help"),
+						InlineKeyboardButton("🐱 SourceCode", url="https://github.com/PredatorHackerzZ")
+					],
+					[
+						InlineKeyboardButton("🏡 Home", callback_data="home"),
+						InlineKeyboardButton("🔐 Close", callback_data="close")
+					]
+	        ]
+            )
+        )
+
+    elif "help" in cb_data:
+        await update.message.edit(
+            text=Translation.HELP_USER,
+            parse_mode="Markdown",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                                        [
+						InlineKeyboardButton("👥 About ", callback_data="about"),
+						InlineKeyboardButton("🐱 SourceCode", url="https://github.com/PredatorHackerzZ")
+					],
+					[
+						InlineKeyboardButton("🏡 Home", callback_data="gotohome"),
+						InlineKeyboardButton("🔐 Close ", callback_data="close")
+					]
+                ]
+            )
+        )
+
+    elif "donate" in cb_data:
+        await update.message.edit(
+            text=.DONATION_USER,
+            parse_mode="Markdown",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                                        [
+						InlineKeyboardButton("👥 About ", callback_data="about"),
+						InlineKeyboardButton("🐱 SourceCode", url="https://github.com/PredatorHackerzZ/UPLOADER-BOT")
+					],
+					[
+						InlineKeyboardButton("🏡 Home", callback_data="home"),
+						InlineKeyboardButton("🔐 Close ", callback_data="close")
+					]
+                ]
+            )
+        )
+
+    elif "home" in cb_data:
+        await update.message.edit(
+            text=Translation.START_TEXT.format(update.from_user.mention),
+            parse_mode="Markdown",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+						InlineKeyboardButton("⭕ Channel ⭕", url="https://t.me/TeleRoidGroup"),
+						InlineKeyboardButton("😇 Support", url="https://t.me/TeleRoid14")
+					],
+					[
+						InlineKeyboardButton("👥 About", callback_data="about"),
+						InlineKeyboardButton("🆘 Help", callback_data="help")
+					],
+                                        [
+						InlineKeyboardButton("💸 Donate ", callback_data="donate"),
+						InlineKeyboardButton("🔐 Close", callback_data="close")
+	            ]
+                ]
+            )
+        )
+
+@Clinton.on_callback_query()
+async def button(bot, update):
+ 
+      if  'close'  in update.data:
+                await update.message.delete()
