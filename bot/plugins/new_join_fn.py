@@ -37,7 +37,7 @@ async def help_message_f(client, message):
             user = await client.get_chat_member(update_channel, message.chat.id)
             if user.status == "kicked":
                await message.reply_text(
-                   text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/UniversalBotsSupport).",
+                   text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/TeleRoid14).",
                    parse_mode="markdown",
                    disable_web_page_preview=True
                )
@@ -57,7 +57,7 @@ async def help_message_f(client, message):
             return
         except Exception:
             await message.reply_text(
-                text=f"Add me into your [Updates Channel](https://t.me/{update_channel}), for more help Contact my [Support Group](https://t.me/UniversalBotsSupport).",
+                text=f"Add me into your [Updates Channel](https://t.me/{update_channel}), For help Contact my [Support Group](https://t.me/TeleRoid14).",
                 parse_mode="markdown",
                 disable_web_page_preview=True
             )
@@ -68,13 +68,12 @@ async def help_message_f(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Updates Channel', url='https://t.me/UniversalBotsUpdate')
+                    InlineKeyboardButton('🤑 Donate', callback_data='donation')
+                    InlineKeyboardButton('👤 About', callback_data='about')
                 ],
                 [
-                    InlineKeyboardButton('Support Group', url='https://t.me/UniversalBotsSupport')
-                ],
-                [
-                    InlineKeyboardButton('Developer', url='https://t.me/Technical_Jigar'), # Bloody Thief, Don't Become a Developer by Stealing other's Codes & Hard Works!
+                    InlineKeyboardButton('🏡 Home', callback_data='home')
+                    InlineKeyboardButton('🔐 Close', callback_data='close')
                 ]
             ]
         ),
