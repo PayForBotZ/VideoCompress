@@ -105,10 +105,10 @@ async def button(bot, update: CallbackQuery):
                 [
                                         [
 						InlineKeyboardButton("👥 About ", callback_data="about"),
-						InlineKeyboardButton("🐱 SourceCode", url="https://github.com/PredatorHackerzZ")
+						InlineKeyboardButton("🤑 Donate", callback_data="donate")
 					],
 					[
-						InlineKeyboardButton("🏡 Home", callback_data="gotohome"),
+						InlineKeyboardButton("🏡 Home", callback_data="home"),
 						InlineKeyboardButton("🔐 Close ", callback_data="close")
 					]
                 ]
@@ -123,8 +123,8 @@ async def button(bot, update: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                                         [
-						InlineKeyboardButton("👥 About ", callback_data="about"),
-						InlineKeyboardButton("🐱 SourceCode", url="https://github.com/PredatorHackerzZ/UPLOADER-BOT")
+						InlineKeyboardButton("💰 PayPal ", url="https://paypal.me/AbhishekKumarIN47"),
+						InlineKeyboardButton("☕ Ko-Fi ", url="https://ko-fi.com/Abhishekkumarin47")
 					],
 					[
 						InlineKeyboardButton("🏡 Home", callback_data="home"),
@@ -150,7 +150,6 @@ async def button(bot, update: CallbackQuery):
 						InlineKeyboardButton("🆘 Help", callback_data="help")
 					],
                                         [
-						InlineKeyboardButton("💸 Donate ", callback_data="donate"),
 						InlineKeyboardButton("🔐 Close", callback_data="close")
 	            ]
                 ]
